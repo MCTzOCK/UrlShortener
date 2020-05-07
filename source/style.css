@@ -1,0 +1,17 @@
+* {
+	text-align: center;
+	font-size: 3vh;
+	font-family: 'Roboto Mono', monospace;
+}
+input[type=text] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=url] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
