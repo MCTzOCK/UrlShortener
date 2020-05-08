@@ -1,16 +1,25 @@
 <?php
 	if(isset($_GET['create_lnk']))
 	{
-		echo "creating link....<br>";
 		if(!file_exists("../l/".$_GET['custom_name'].".html"))
 		{
+			$index = "
+				<html>
+					<head>
+					</head>
+					<body>
+						<center>
+							<h1>
+								Deine URL ist <b>http://mctzock.de/l/".$_GET['custom_name'].".html</b>
+							</h1>
+						</center>
+					</body>
+				</html>
+			";
 			$file = fopen("../l/".$_GET['custom_name'].".html", "w");
-			echo "writing file...<br>";
 			fwrite($file, "<script>window.location.assign(\"".$_GET['create_lnk']."\");</script>");
 			fclose($file);
-			echo "getting url...<br>";
-			echo "finished....<br>";
-			echo "Your URL is http://mctzock.de/l/".$_GET['custom_name'].".html<br>";
+			echo $index;
 		}else
 		{
 			echo "Error! Name already exists! Please choose another!";
